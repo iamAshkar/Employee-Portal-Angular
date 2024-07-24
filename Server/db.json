@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "super admin",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "44",
+      "name": "shukur",
+      "email": "shukur@gmail.com",
+      "active": "0"
+    },
+    {
+      "id": "88",
+      "name": "shakeer",
+      "email": "shakeer@gmail.com",
+      "active": "0"
+    },
+    {
+      "id": "654",
+      "name": "ashkar",
+      "email": "ashkar@gmail.com",
+      "active": "1"
+    }
+  ]
+}

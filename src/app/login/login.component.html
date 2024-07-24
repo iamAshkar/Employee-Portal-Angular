@@ -1,0 +1,45 @@
+<div class="row">
+ 
+    <div class="col-sm-6 mt-4">
+        <!-- image -->
+        <!-- propert binding -->
+        <img [src]="imageUrl"
+        width="100%"
+        height="400px" alt="">
+    </div>
+    <div class="col-sm-6">
+        <!-- form -->
+        <!-- loading spinner -->
+        <form (ngSubmit)="login()" class="shadow-form m-5 p-5">
+          <div *ngIf="spinner" class="d-flex justify-content-center mt-5">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <!-- sritng interpolation -->
+            <h1 class="log text-center"> {{welcomemesaage}} </h1>
+            <div class="mb-3">
+              <!-- email -->
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input [(ngModel)]="empEmail" name="empEmail" #emailEmp="ngModel"  type="email" class="form-control" id="exampleFormControlInput1" required >
+        <div id="emailhelp" class="form-text">we'll never share your email with anyone else.</div>
+        <div *ngIf="emailEmp.invalid && emailEmp.touched" class="text-danger fw-bolder m-2">*Ivalid Email</div>
+      </div>
+      <div class="mb-3">
+        <!-- password -->
+        <label for="exampleFormControlInput1" class="form-label">password </label>
+        <input [(ngModel)]="empPswd" name="empPswd"  #pswdEmp="ngModel" type="password" class="form-control" id="exampleFormControlInput1" required pattern="[0-9a-zA-Z]*">
+        <div *ngIf="pswdEmp.invalid && pswdEmp.touched" class="text-danger fw-bolder m-2">*Ivalid password</div>
+
+      </div>
+      <div id="form-check">
+        <input type="checkbox"> <small>Check me out</small>
+      </div>
+<div class="text-center">
+    <button type="submit" class="btn btn-primary">Login</button>
+
+</div>  
+  </form>
+         
+    </div>
+</div>
